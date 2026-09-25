@@ -1,4 +1,4 @@
-"""Tests for scripts/make-2x2-table-csv.py (Task 8, fixes spec F2)."""
+"""Tests for scripts/make-2x2-table-csv.py ."""
 
 import importlib.util
 import sys
@@ -24,7 +24,7 @@ def mod():
 
 
 def test_median_not_minimum(mod):
-    """The F2 regression: an even count must interpolate, never take the min."""
+    """Regression: an even count must interpolate, never take the min."""
     # min 1.0e-3, median 2.5e-3
     assert mod.median([1.0e-3, 2.0e-3, 3.0e-3, 4.0e-3]) == pytest.approx(2.5e-3, abs=1e-15)
 

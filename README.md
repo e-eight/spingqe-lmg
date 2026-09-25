@@ -48,24 +48,27 @@ spingqe-exact --n 4 8 12 16 --out-dir results/                   # exact energie
 
 ## Reproducing the paper
 
-Run every command from the repository root. None of the commands below
+Table, figure and section numbers refer to the published version of the
+paper. Run every command from the repository root. None of the commands below
 retrain anything: they rebuild each table, figure and number from `data/`,
 and all of them run on CPU.
 
 | Paper item | Command | Input |
 |---|---|---|
-| Table: throughput (tab:throughput) | `python scripts/table-benchmark.py throughput data/tables/bench-merged-2026-07-08.csv` (the paper prints the l.gpu (g), Incr GPU, P.-E. GPU and Symm columns) | `bench-merged-2026-07-08.csv` |
-| Peak-RSS figures in the text | `python scripts/table-benchmark.py rss data/tables/bench-merged-2026-07-08.csv` | same |
-| Fig.: permutation-symmetric showcase to N=1000 | `python scripts/plot-dicke-showcase.py` | `data/runs/dicke-showcase-{mf,zero}-seeds-2026-08-06` |
-| Table: descent test (tab:descent) | `python scripts/descent-test.py --json data/tables/descent-test-n16-lam2.0.json`; the last column is `python scripts/gradient-probe.py` | computed directly, a few minutes on one core |
-| Fig.: onset scan at N=16 | `python scripts/plot-reachability-regimes.py` | `data/tables/lreach-2026-07-26.csv` |
-| Table: onset (tab:onset) | `python scripts/paper-numbers.py` (first block) | `lreach-2026-07-26.csv`, `lreach-n28-2026-07-28.csv` |
-| Table: collective accuracy at L=12 (tab:pool-accuracy) | `python scripts/table-pool-accuracy.py data/tables/pool-accuracy-l12-s1-10-2026-07-29.csv --latex --collective-only --floor 1e-10 --stat median` | `pool-accuracy-l12-s1-10-2026-07-29.csv` |
-| Table: pool vs reference (tab:2x2) | the `upper` block of `data/tables/2x2-table-2026-07-29.csv` | same |
-| In-text numbers: onset-scan cost, floor lengths at L=26, the N=28 pre-registered arms, pairwise spreads, the uniform-sampler control, the N=1000 endpoint, the refinement-backend check | `python scripts/paper-numbers.py` | `data/` |
+| Table II (evaluator throughput) | `python scripts/table-benchmark.py throughput data/tables/bench-merged-2026-07-08.csv` (the paper prints the l.gpu (g), Incr GPU, P.-E. GPU and Symm columns) | `bench-merged-2026-07-08.csv` |
+| Peak RSS quoted in Sec. IV | `python scripts/table-benchmark.py rss data/tables/bench-merged-2026-07-08.csv` | same |
+| Fig. 1 (permutation-symmetric search to N=1000) | `python scripts/plot-dicke-showcase.py` | `data/runs/dicke-showcase-{mf,zero}-seeds-2026-08-06` |
+| Table III (descent test) | `python scripts/descent-test.py --json data/tables/descent-test-n16-lam2.0.json`; the last column is `python scripts/gradient-probe.py` | computed directly, a few minutes on one core |
+| Fig. 2 (onset scan at N=16) | `python scripts/plot-reachability-regimes.py` | `data/tables/lreach-2026-07-26.csv` |
+| Table IV (measured onset) | `python scripts/paper-numbers.py` (first block) | `lreach-2026-07-26.csv`, `lreach-n28-2026-07-28.csv` |
+| Table VI (collective pool at L=12) | `python scripts/table-pool-accuracy.py data/tables/pool-accuracy-l12-s1-10-2026-07-29.csv --latex --collective-only --floor 1e-10 --stat median` | `pool-accuracy-l12-s1-10-2026-07-29.csv` |
+| Table VII (pool vs reference state) | the `upper` block of `data/tables/2x2-table-2026-07-29.csv` | same |
+| Numbers in the text: the N=1000 endpoint and refinement-backend check (Sec. IV), onset-scan cost and the N=28 pre-registered test (Sec. VI), floor lengths at L=26, pairwise spreads, the gains over the reference state and the uniform-sampler control (Sec. VII) | `python scripts/paper-numbers.py` | `data/` |
 
 Each block of `paper-numbers.py` prints the value the paper states next to
-the value it recomputes.
+the value it recomputes. Table I (invariant-subspace dimensions) is derived
+analytically in Sec. III. Table V (the four regimes) summarizes the
+measurements above. Neither has data of its own.
 
 ### Rebuilding the derived tables from the run records
 
@@ -126,19 +129,19 @@ evaluator.
 | `eval.csv` | Periodic diagnostic evaluations |
 
 Onset scans store one `cells/cell-*.csv` per (pool, N, lambda, L), with one row
-per random restart. Model checkpoints (`*.pt`, about 180 GB in total) and Slurm
+per random restart. Model checkpoints (`*.pt`, about 190 GB in total) and Slurm
 logs are not included. In manifests and metadata, absolute cluster paths were
 rewritten as repository-relative ones.
 
 | Campaign | Used for |
 |---|---|
-| `pool-accuracy-l12-s1-10-2026-07-28`, `pool-accuracy-pairwise-l12-s1-10-2026-07-29` | The full 51-cell grid at L=12, 10 seeds per cell (tab:pool-accuracy and the pairwise prose) |
-| `pool-vs-reference-2026-07-26`, `collective-mf-n16-2026-07-30` | tab:2x2 and the collective mean-field contrast |
-| `dicke-showcase-mf-seeds-2026-08-06`, `dicke-showcase-zero-seeds-2026-08-06` | Fig. dicke-showcase, N=50 to 1000 |
-| `reachability-depth-grid-2026-07-26` | Onset scan, N=8 to 24 (12 restarts per cell) |
+| `pool-accuracy-l12-s1-10-2026-07-28`, `pool-accuracy-pairwise-l12-s1-10-2026-07-29` | The full 51-cell grid at L=12, 10 seeds per cell (Table VI and the pairwise results of Sec. VII) |
+| `pool-vs-reference-2026-07-26`, `collective-mf-n16-2026-07-30` | Table VII and the collective mean-field contrast (Sec. VII) |
+| `dicke-showcase-mf-seeds-2026-08-06`, `dicke-showcase-zero-seeds-2026-08-06` | Fig. 1, N=50 to 1000 |
+| `reachability-depth-grid-2026-07-26` | Fig. 2 and Table IV: onset scan, N=8 to 24 (12 restarts per cell) |
 | `prospective-depth-n28-2026-07-28` | The pre-registered N=28 test: onset scan (`scan/`) and the L=68/72 training arms (`train/`) |
-| `collective-dicke-l26` | Floor length at L=26, N=4 to 20, 6 seeds |
-| `random-sampler-control-2026-07-25` | The uniform-sampler control (153 pairs) |
+| `collective-dicke-l26` | Floor length at L=26 (Sec. VII), N=4 to 20, 6 seeds |
+| `random-sampler-control-2026-07-25` | The uniform-sampler control of Sec. VII (153 pairs) |
 
 `data/tables/n1000-mf-timing-sacct.csv` records the Slurm accounting wall time
 of the ten N=1000 mean-field runs.

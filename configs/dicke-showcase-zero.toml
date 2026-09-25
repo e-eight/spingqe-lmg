@@ -1,4 +1,4 @@
-# Fig. dicke-showcase, zero-reference arms: lambda=1.5, L=12, 10 seeds per N.
+# Fig. 1, zero-reference arms: lambda=1.5, L=12, 10 seeds per N.
 #   variant "coarse": pool.angle_scale = 0  (unscaled vocabulary; not plotted)
 #   variant "fine":   pool.angle_scale = 8  (8/N-rescaled vocabulary; plotted)
 # n_qubits, seed and angle_scale are supplied per row by the sweep manifest.

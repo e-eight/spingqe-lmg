@@ -218,7 +218,7 @@ def test_train_seq_len_1_does_not_crash(tmp_path):
 
 
 def test_save_final_checkpoint_false_skips_pt_files(tmp_path):
-    """D5: save_final_checkpoint=False must skip final.pt and ckpt-latest.pt
+    """save_final_checkpoint=False must skip final.pt and ckpt-latest.pt
     but still write the energy/sequence artifacts."""
     out = tmp_path / "run"
     train(micro_config(save_final_checkpoint=False), out)

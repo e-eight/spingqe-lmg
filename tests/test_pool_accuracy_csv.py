@@ -1,4 +1,4 @@
-"""Tests for scripts/make-pool-accuracy-10seed-csv.py (Task 7)."""
+"""Tests for scripts/make-pool-accuracy-10seed-csv.py."""
 
 import importlib.util
 import math

@@ -19,12 +19,12 @@ reproducing the production refinement starting point). No training of any
 kind. Any depth at which random sequences reach machine precision is a depth
 at which the generative sequence model cannot be contributing.
 
-Fixed across all three pools: gamma = 0, h = 1, init_state = "zero" (every
-Table 1 config). Collective refinement runs in the (N+1)-dim Dicke sector
+Fixed across all three pools: gamma = 0, h = 1, init_state = "zero" (as in
+the L=12 pool-accuracy grid). Collective refinement runs in the (N+1)-dim Dicke sector
 (`spingqe_lmg.evaluators.dicke.dicke_refine_tokens`, polynomial cost); the two
 pairwise pools run full 2^N statevector refinement
 (`spingqe_lmg.refine.refine_angles`) on a lightning device chosen by N
-(D6: `lightning.qubit` below N=16, `lightning.gpu` at and above).
+(`lightning.qubit` below N=16, `lightning.gpu` at and above).
 
 Streams one CSV row per (pool, N, lambda, L, restart) to stdout-adjacent file
 as it completes, so a killed job yields a usable partial curve.
@@ -54,14 +54,12 @@ from spingqe_lmg.refine import refine_angles
 
 H_FIELD = 1.0
 GAMMA = 0.0
-LIGHTNING_GPU_THRESHOLD = 16  # D6: lightning.qubit below this N, lightning.gpu at/above
-REACHED_TOL = 1e-10  # D1: L-BFGS convergence floor
+LIGHTNING_GPU_THRESHOLD = 16  # lightning.qubit below this N, lightning.gpu at/above
+REACHED_TOL = 1e-10  # L-BFGS convergence floor
 
-# PoolConfig fields matching Table 1's three canonical variants exactly (see
-# configs/campaign-largen-collective-dicke.toml, configs/sweep-seedfill-table1.toml,
-# configs/sweep-statevec-gpu-extmf-n12.toml, configs/campaign-largen-pairwise-control-n24.toml).
-# No angle_scale override: Table 1's main sweep and the prior idealized scan both
-# use the unscaled DEFAULT_ANGLES.
+# PoolConfig fields matching the three pool variants of the L=12 pool-accuracy
+# grid exactly. No angle_scale override: that grid uses the unscaled
+# DEFAULT_ANGLES.
 POOL_CONFIGS = {
     "collective": PoolConfig(kind=PoolKind.COLLECTIVE),
     "pairwise-all": PoolConfig(

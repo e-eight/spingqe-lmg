@@ -5,8 +5,8 @@ Applies every distinct token in a pool once, at its discrete angle, to that
 configuration's own reference state, and scores the resulting energy against the
 reference energy. A configuration no single token improves is a token-level local
 minimum. The test needs relative energies only, so it runs without a known ground
-state -- this is the cheap probe of the capability check (manuscript Sec. IV,
-Table "descent").
+state -- this is the cheap probe of the capability check (paper Sec. V,
+Table III).
 
 Usage:
     python scripts/descent-test.py                    # all configs, N=16, lambda=2.0

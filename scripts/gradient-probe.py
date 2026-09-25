@@ -4,10 +4,10 @@
 For each pool generator (collapsing the ten-angle discrete vocabulary to one
 symmetric small angle), evaluates the exact energy at theta = +eps and
 theta = -eps and reports the central-difference derivative dE/dtheta|_0.
-Compares against the discrete descent test (manuscript Sec. IV, Table
-"descent") reported in data/tables/descent-test-n16-lam2.0.json: does a continuous
+Compares against the discrete descent test (paper Sec. V, Table
+III) reported in data/tables/descent-test-n16-lam2.0.json: does a continuous
 small-angle probe find an improving direction exactly where the discrete
-probe does, at the five tab:descent configurations?
+probe does, at the five Table III configurations?
 
 Usage:
     python scripts/gradient-probe.py [--json data/tables/gradient-probe-n16-lam2.0.json]

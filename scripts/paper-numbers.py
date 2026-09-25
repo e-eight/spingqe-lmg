@@ -62,7 +62,7 @@ def header(title: str) -> None:
 
 
 def onset_table() -> None:
-    header("tab:onset -- onset = first L with success fraction >= 0.5 (collective, zero ref)")
+    header("Table IV -- onset = first L with success fraction >= 0.5 (collective, zero ref)")
     frames = [
         pd.read_csv(TABLES / "lreach-2026-07-26.csv", comment="#"),
         pd.read_csv(TABLES / "lreach-n28-2026-07-28.csv", comment="#"),
@@ -91,7 +91,7 @@ def onset_table() -> None:
 
 
 def onset_scan_cost() -> None:
-    header("onset-scan cost -- serial refinement time for one (pool, N, lambda) sweep")
+    header("Sec. VI onset-scan cost -- serial refinement time for one (pool, N, lambda) sweep")
     secs = defaultdict(float)
     for f in (RUNS / "reachability-depth-grid-2026-07-26" / "cells").glob("cell-*.csv"):
         with open(f) as fh:
@@ -109,7 +109,7 @@ def onset_scan_cost() -> None:
 
 
 def floor_length() -> None:
-    header("floor length -- seeds at the floor at L=26 (collective, zero ref, 6 seeds)")
+    header("Sec. VII floor length -- seeds at the floor at L=26 (collective, zero ref, 6 seeds)")
     runs = load_runs("collective-dicke-l26")
     cells = defaultdict(list)
     for r in runs:
@@ -121,7 +121,7 @@ def floor_length() -> None:
 
 
 def n28_arms() -> None:
-    header("pre-registered N=28 arms (lambda=2.0, 6 seeds each)")
+    header("Sec. VI pre-registered N=28 arms (lambda=2.0, 6 seeds each)")
     runs = load_runs("prospective-depth-n28-2026-07-28", "train")
     by_l = defaultdict(list)
     for r in runs:
@@ -136,7 +136,7 @@ def n28_arms() -> None:
 
 
 def pairwise_grid() -> None:
-    header("L=12 grid footnote -- pairwise ten-seed spread")
+    header("Sec. VII L=12 grid footnote -- pairwise ten-seed spread")
     df = pd.read_csv(TABLES / "pool-accuracy-l12-s1-10-2026-07-29.csv", comment="#")
     pw = df[df["pool"] != "collective"]
     g = pw.groupby(["pool", "N", "lambda"])["refined_rel_error"]
@@ -149,7 +149,7 @@ def pairwise_grid() -> None:
 
 
 def pairwise_vs_reference() -> None:
-    header("pairwise runs against their own reference-state energy")
+    header("Sec. VII pairwise runs against their own reference-state energy")
     runs = []
     for camp in (
         "pool-accuracy-l12-s1-10-2026-07-28",
@@ -191,7 +191,7 @@ def pairwise_vs_reference() -> None:
 
 
 def two_by_two() -> None:
-    header("tab:2x2 prose -- reference-state and pool levers at N=16, L=12")
+    header("Table VII and Sec. VII prose -- reference-state and pool levers at N=16, L=12")
     df = pd.read_csv(TABLES / "2x2-table-2026-07-29.csv", comment="#")
     up = df[df["block"] == "upper"].set_index(["pool", "reference", "lam"])["refined_rel_error"]
     for lam in (1.5, 2.0):
@@ -223,7 +223,7 @@ def two_by_two() -> None:
 
 
 def sampler_control() -> None:
-    header("uniform random-sampler control (paired against the 3-seed runs)")
+    header("Sec. VII uniform random-sampler control (paired against the 3-seed runs)")
     df = pd.read_csv(RUNS / "random-sampler-control-2026-07-25" / "summary.csv")
     df["ratio"] = df["random_refined_rel_error"] / df["gqe_refined_rel_error"]
     print(f"pairs: {len(df)} over pools {sorted(df['pool'].unique())} (paper: 153)")
@@ -244,7 +244,7 @@ def sampler_control() -> None:
 
 
 def showcase() -> None:
-    header("Fig. dicke-showcase and the N=1000 endpoint (lambda=1.5, L=12, 8/N vocabulary)")
+    header("Fig. 1 and the Sec. IV N=1000 endpoint (lambda=1.5, L=12, 8/N vocabulary)")
     mf = [r for r in load_runs("dicke-showcase-mf-seeds-2026-08-06") if r["angle_scale"] == 8]
     zero = [r for r in load_runs("dicke-showcase-zero-seeds-2026-08-06") if r["angle_scale"] == 8]
 
@@ -272,7 +272,7 @@ def showcase() -> None:
 
 
 def refine_backend() -> None:
-    header("refinement-backend check")
+    header("Sec. IV refinement-backend check")
     d = json.loads((TABLES / "refine-backend-comparison.json").read_text())
     cells = sorted({(r["n_qubits"], r["lam"]) for r in d["results"]})
     devs = sorted({k for r in d["results"] for k in r["per_device"]})

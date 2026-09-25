@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-r"""Generate LaTeX table rows for the pool-variant accuracy table (Table 1).
+r"""Generate LaTeX table rows for the pool-variant accuracy table (Table VI in the paper).
 
 Reads one or more ``results.csv`` files (or ``combined-results.csv``) from GQE
 sweeps, groups by (N, lambda, pool variant), computes the best-over-seeds
@@ -8,7 +8,7 @@ combinations.
 
 Usage::
 
-    # The paper's collective-pool accuracy table (tab:pool-accuracy)
+    # The paper's collective-pool accuracy table (Table VI)
     python scripts/table-pool-accuracy.py \
         data/tables/pool-accuracy-l12-s1-10-2026-07-29.csv \
         --latex --collective-only --floor 1e-10 --stat median
@@ -108,8 +108,8 @@ def best_over_seeds(
 ) -> pd.DataFrame:
     """Group by (N, lam, variant) and reduce the per-seed errors over seeds.
 
-    *stat* is ``"best"`` (min, the historical Table 1 default) or ``"median"``
-    (the seed-robust statistic; see review M5).  Both the refined error and the
+    *stat* is ``"best"`` (min, the historical default) or ``"median"``
+    (the seed-robust statistic).  Both the refined error and the
     raw pre-refinement error are reduced with the same statistic, and the
     across-seed min and max of the refined error are carried alongside so a
     caller can report a spread with the central value.
@@ -197,7 +197,7 @@ def to_latex(
         false, emit only the refined error, which is the historical layout.
     collective_only : bool
         When true, emit the four-column collective-pool layout used by
-        ``tab:pool-accuracy``: N, lambda, the stat-selected central value, and
+        Table VI: N, lambda, the stat-selected central value, and
         the best over seeds, the last daggered where any seed reached the
         convergence floor.  Takes precedence over *with_raw*.
     """
@@ -313,7 +313,7 @@ def main(argv: list[str] | None = None) -> None:
         "--stat",
         choices=["best", "median"],
         default="best",
-        help="Seed-reduction statistic: 'best' (min, Table 1 default) or "
+        help="Seed-reduction statistic: 'best' (min, historical default) or "
         "'median' (seed-robust qualifier for prose ordering claims)",
     )
     ap.add_argument(
@@ -369,7 +369,7 @@ def _build_targets(
     extended: bool = False,
     lambdas: tuple[float, ...] = (0.5, 1.0, 1.5, 2.0),
 ) -> list[tuple[int, float]]:
-    """Return ordered (N, lam) pairs for the Table 1 grid.
+    """Return ordered (N, lam) pairs for the pool-accuracy grid.
 
     Standard (extended=False): N=8,10,12,14,16 over *lambdas*.
     Extended: adds N=18,20,22 with the same λ grid.

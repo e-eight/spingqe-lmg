@@ -1,4 +1,4 @@
-"""Tests for scripts/reachability-depth-scan.py (Task 1 of the reachability-depth plan)."""
+"""Tests for scripts/reachability-depth-scan.py."""
 
 import csv
 import importlib.util

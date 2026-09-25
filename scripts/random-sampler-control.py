@@ -1,4 +1,4 @@
-"""Compute-matched random-sampler control for the Table 1 pool-accuracy cells.
+"""Compute-matched random-sampler control for the L=12 pool-accuracy cells.
 
 Answers the question the pool-accuracy table cannot answer on its own: does the
 learned sequence model earn its keep, or would uniformly drawn token sequences
@@ -64,7 +64,7 @@ from spingqe_lmg.training import initial_angle_for
 PRIMARY_BUDGET = 7010
 EXTRA_BUDGET = 1400  # checkpoint-eval sequences, diagnostic-only in GQE
 
-# D3 fastest-admissible scoring evaluator by pool kind.
+# Fastest admissible scoring evaluator by pool kind.
 _AUTO_SCORER = {
     PoolKind.COLLECTIVE: EvaluatorKind.DICKE,
     PoolKind.PAULI_PAIR: EvaluatorKind.INCREMENTAL,
@@ -77,11 +77,9 @@ def _draw_seed(pool_kind: str, n_qubits: int, lam: float, draw: int) -> int:
     return int.from_bytes(hashlib.sha256(key).digest()[:8], "big") % (2**63)
 
 
-# Pre-nesting TrainConfig keys, still present in the legacy sweeps that source
-# Table 1's pairwise cells (lmg-t1-scaling-n12-16, pairwise-l12-uniform,
-# lmg-extmf-gap-n12-16).  They map onto today's [train.pennylane] block.
-# scripts/mine-resource-table.py handles the same split ad hoc; promoting this
-# into config.py is a sync-back candidate.
+# Pre-nesting TrainConfig keys, still present in the older sweeps that supplied
+# the 3-seed pairwise cells.  They map onto today's [train.pennylane] block
+# (spingqe_lmg.config migrates them the same way).
 _LEGACY_PENNYLANE_KEYS = {
     "qml_device": "device",
     "shots": "shots",
@@ -187,7 +185,7 @@ def _verify_scoring(cfg, cfg_scoring, pool, ham, init_angle, n_qubits, rng, n_ch
 def _paired_run_reference(gqe_run: Path):
     """Fall back to the paired run's own metadata.json.
 
-    Needed for paired runs that are not Table 1 cells (the fine-lambda and
+    Needed for paired runs that are not pool-accuracy grid cells (the fine-lambda and
     lambda=0.5 extension sweeps), where the canonical CSV has no matching row.
     """
     path = gqe_run / "metadata.json"
@@ -246,7 +244,7 @@ def main() -> None:
     ap.add_argument(
         "--score-evaluator",
         default="auto",
-        help="'auto' (D3 fastest admissible), 'mirror', or an EvaluatorKind value",
+        help="'auto' (fastest admissible), 'mirror', or an EvaluatorKind value",
     )
     ap.add_argument("--refine-device", default=None, help="override; default mirrors paired run")
     ap.add_argument("--verify-scoring", type=int, default=64, help="0 disables the cross-check")

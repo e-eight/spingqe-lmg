@@ -3,8 +3,8 @@ r"""Generate LaTeX table rows for the evaluator throughput and peak-RSS tables,
 and strong-scaling summary numbers, from the canonical benchmark CSVs.
 
 Every value is a median over the `rep` repetitions in the canonical
-2026-07-08 benchmark CSVs --- never hand-typed. The paper's throughput table
-(tab:throughput) prints four of the `throughput` columns: l.gpu (g),
+2026-07-08 benchmark CSVs --- never hand-typed. The paper's Table II
+prints four of the `throughput` columns: l.gpu (g),
 Incr GPU, P.-E. GPU and Symm.
 
 Usage::

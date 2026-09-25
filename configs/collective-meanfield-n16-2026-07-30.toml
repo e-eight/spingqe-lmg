@@ -1,6 +1,6 @@
 # Collective pool from the mean-field reference: N=16, lambda in {1.5, 2.0},
 # seeds 1-10, Dicke (permutation-symmetric) evaluator, L=12 (default).
-# Supplies the collective + mean-field numbers quoted with tab:2x2.
+# Supplies the collective + mean-field numbers quoted with Table VII.
 #
 #   spingqe-sweep-plan --config configs/collective-meanfield-n16-2026-07-30.toml \
 #       --runs-root data/runs/collective-mf-n16-2026-07-30

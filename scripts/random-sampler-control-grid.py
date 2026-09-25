@@ -44,7 +44,7 @@ def load_cells_from_sweep(sweep_dir: Path, runs_root: Path):
     """Enumerate cells directly from a sweep's run directories.
 
     Used for the fine-lambda and lambda=0.5 extension sweeps, whose cells are not
-    Table 1 rows and so do not appear in the canonical CSV.  Reads (N, lambda,
+    rows of the pool-accuracy grid and so do not appear in the canonical CSV.  Reads (N, lambda,
     seed) from each run's config.json rather than parsing directory names.
     """
     cells = []
@@ -90,8 +90,8 @@ def main() -> None:
         type=Path,
         default=None,
         help="enumerate cells from this sweep's run dirs instead of the canonical CSV "
-        "(for sweeps whose cells are not Table 1 rows); --canonical-csv is still "
-        "passed through so any cell that IS a Table 1 row gets its reference numbers",
+        "(for sweeps whose cells are not pool-accuracy grid rows); --canonical-csv is "
+        "still passed through so any cell that IS a grid row gets its reference numbers",
     )
     ap.add_argument("--runs-root", type=Path, required=True)
     ap.add_argument("--out-root", type=Path, required=True)

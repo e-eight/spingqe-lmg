@@ -1,4 +1,4 @@
-"""Backend guard (D4): default.qubit must be refused on DeltaAI unless overridden.
+"""Backend guard: default.qubit must be refused on DeltaAI unless overridden.
 
 Covers both CLI entry points: train_main (gated on train.refine) and
 refine_main (always refines, so it must not be gated on that flag).
