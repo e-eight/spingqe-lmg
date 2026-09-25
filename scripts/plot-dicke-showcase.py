@@ -69,16 +69,17 @@ SERIES = {
 }
 
 # The two no-search reference baselines carry no legend entries; the caption
-# explains them. Their linestyles must avoid the series linestyles above, so
-# neither can be "-" or "--".
+# explains them. Each takes the colour of its own reference state's arm, so
+# colour groups every curve by reference state; the linestyle is what separates
+# a baseline from its arm, so neither can be "-" or "--".
 BASELINES = {
     "mean_field": ":",
     "zero": "-.",
 }
+REFERENCE_COLOR = {state: style[1] for (state, _), style in SERIES.items()}
 
 N_SERIES = (50, 100, 200, 500, 1000)
 Y_LIMS = (1e-7, 2e-1)
-BASELINE_COLOR = "0.35"
 
 # A cell with only a couple of finished seeds is not a median, it is whichever
 # seeds happened to land first. Campaigns run 10 seeds; drop anything under
@@ -168,7 +169,7 @@ def main() -> None:
         ax.semilogy(
             np.asarray(N_SERIES),
             np.asarray(y),
-            color=BASELINE_COLOR,
+            color=REFERENCE_COLOR[init_state],
             linestyle=ls,
             lw=1.0,
         )
@@ -259,7 +260,7 @@ def main() -> None:
             **at(N_SERIES[idx], base_y[init_state][idx]),
             xytext=(0, dy),
             ha="center",
-            color=BASELINE_COLOR,
+            color=REFERENCE_COLOR[init_state],
             **lab,
         )
 
