@@ -1,0 +1,13 @@
+# Slurm accounting (sacct -X) for the N=1000 mean-field seed runs of dicke-showcase-mf-seeds-2026-08-06.
+# Array task k ran run N1000-s(k+1). Elapsed covers job start to exit (training + refinement), on 16 Grace cores + 1 H100.
+slurm_job,run_id,elapsed,state,alloc_cpus,alloc_gpus
+2892945_0,N1000-s1,00:06:09,COMPLETED,16,1
+2893130_1,N1000-s2,00:06:45,COMPLETED,16,1
+2893130_2,N1000-s3,00:06:45,COMPLETED,16,1
+2893130_3,N1000-s4,00:07:04,COMPLETED,16,1
+2893130_4,N1000-s5,00:06:21,COMPLETED,16,1
+2893184_5,N1000-s6,00:06:02,COMPLETED,16,1
+2893184_6,N1000-s7,00:06:24,COMPLETED,16,1
+2893184_7,N1000-s8,00:06:11,COMPLETED,16,1
+2893184_8,N1000-s9,00:06:08,COMPLETED,16,1
+2893184_9,N1000-s10,00:06:26,COMPLETED,16,1

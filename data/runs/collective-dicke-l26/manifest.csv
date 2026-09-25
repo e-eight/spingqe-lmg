@@ -1,0 +1,13 @@
+row,run_id,config,out_dir,hamiltonian.lam,hamiltonian.n_qubits,pool.angle_scale,pool.kind,train.seed
+0,collective-scaled_n_qubits18_lam1.0_s1,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits18_lam1.0_s1,1.0,18,8,"""collective""",1
+1,collective-scaled_n_qubits18_lam1.0_s2,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits18_lam1.0_s2,1.0,18,8,"""collective""",2
+2,collective-scaled_n_qubits18_lam1.0_s3,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits18_lam1.0_s3,1.0,18,8,"""collective""",3
+3,collective-scaled_n_qubits18_lam1.0_s4,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits18_lam1.0_s4,1.0,18,8,"""collective""",4
+4,collective-scaled_n_qubits18_lam1.0_s5,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits18_lam1.0_s5,1.0,18,8,"""collective""",5
+5,collective-scaled_n_qubits18_lam1.0_s6,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits18_lam1.0_s6,1.0,18,8,"""collective""",6
+6,collective-scaled_n_qubits20_lam1.0_s1,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits20_lam1.0_s1,1.0,20,8,"""collective""",1
+7,collective-scaled_n_qubits20_lam1.0_s2,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits20_lam1.0_s2,1.0,20,8,"""collective""",2
+8,collective-scaled_n_qubits20_lam1.0_s3,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits20_lam1.0_s3,1.0,20,8,"""collective""",3
+9,collective-scaled_n_qubits20_lam1.0_s4,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits20_lam1.0_s4,1.0,20,8,"""collective""",4
+10,collective-scaled_n_qubits20_lam1.0_s5,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits20_lam1.0_s5,1.0,20,8,"""collective""",5
+11,collective-scaled_n_qubits20_lam1.0_s6,configs/sweep-collective-dicke-l26-n1820.toml,data/runs/collective-dicke-l26-n1820/collective-scaled_n_qubits20_lam1.0_s6,1.0,20,8,"""collective""",6

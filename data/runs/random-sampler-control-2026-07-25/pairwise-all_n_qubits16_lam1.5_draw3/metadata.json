@@ -1,0 +1,80 @@
+{
+  "control": "compute-matched uniform random sampler",
+  "pool_variant": "pairwise-all",
+  "pool_kind": "pauli_pair",
+  "pool_size": 3760,
+  "n_qubits": 16,
+  "lam": 1.5,
+  "seq_len": 12,
+  "draw": 3,
+  "rng_seed": 7835246806686633016,
+  "paired_gqe_run": "data/runs/pairwise-l12-uniform/pairwise-all_n_qubits16_lam1.5_s3",
+  "paired_gqe_seed": 3,
+  "ground_energy": -8.542674959373004,
+  "scoring_evaluator": "incremental",
+  "paired_run_evaluator": "pennylane",
+  "legacy_config_migration": {
+    "legacy_keys": {
+      "qml_device": "lightning.gpu",
+      "shots": 0,
+      "refine_shots": false,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    },
+    "migrated_to_pennylane": {
+      "device": "lightning.gpu",
+      "shots": 0,
+      "refine_shots": 0,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    }
+  },
+  "scoring_cross_check": {
+    "performed": true,
+    "n_sequences": 64,
+    "mirrored_evaluator": "pennylane",
+    "substituted_evaluator": "incremental",
+    "max_abs_diff": 3.197442310920451e-14,
+    "max_rel_diff": 5.890094628934472e-15
+  },
+  "refine_device": "lightning.gpu",
+  "primary": {
+    "n_samples": 7010,
+    "raw_energy": -7.973046128409857,
+    "raw_rel_error": 0.06668038216040884,
+    "refined_energy": -8.00219605995302,
+    "refined_rel_error": 0.06326811004637041,
+    "refine_evaluations": 29,
+    "refine_seconds": 1.0445181009999942,
+    "scoring_seconds": 94.39364665700123
+  },
+  "extended": {
+    "n_samples": 8410,
+    "raw_energy": -7.980605120162076,
+    "raw_rel_error": 0.06579553147977692,
+    "refined_energy": -8.002191268782157,
+    "refined_rel_error": 0.06326867089772967,
+    "tokens": [
+      0,
+      193,
+      1661,
+      649,
+      3623,
+      466,
+      839,
+      184,
+      583,
+      2578,
+      3711,
+      2347,
+      1843
+    ],
+    "refine_seconds": 0.9264872650019242
+  },
+  "canonical_reference": {
+    "gqe_refined_rel_error": 0.06326867089772525,
+    "gqe_raw_rel_error": 0.06581865740757306,
+    "gqe_run": "pairwise-all_n_qubits16_lam1.5_s3",
+    "gqe_source_sweep": "pairwise-l12-uniform"
+  }
+}

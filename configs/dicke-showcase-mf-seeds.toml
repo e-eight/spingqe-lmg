@@ -1,0 +1,42 @@
+# Fig. dicke-showcase, mean-field arm: lambda=1.5, L=12, 8/N-rescaled angle
+# vocabulary (angle_scale = 8), N in {50, 100, 200, 500, 1000} x seeds 1-10.
+# n_qubits and seed are supplied per row by the sweep manifest.
+# Runs: data/runs/dicke-showcase-mf-seeds-2026-08-06
+
+run_name = "dicke-showcase-mf-seeds"
+
+[hamiltonian]
+kind = "lmg"
+n_qubits = 1000
+h = 1.0
+lam = 1.5
+gamma = 0.0
+
+[pool]
+kind = "collective"
+connectivity = "all"
+paulis = ["ZZ", "XX", "YY"]
+include_single_z = true
+# Rescales every vocabulary angle to a * 8 / N, so the effective collective
+# rotation tuned at N=8 is preserved at every N.
+angle_scale = 8
+
+[model]
+n_layer = 12
+n_head = 8
+n_embd = 512
+dropout = 0.2
+bias = false
+
+[train]
+epochs = 700
+seq_gen = 10
+seq_len = 12
+n_batches = 10
+temperature = 0.5
+beta = 0.3
+seed = 1
+n_jobs = 16
+energy_norm = "shift_scale"
+init_state = "mean_field"
+evaluator = "dicke"

@@ -1,0 +1,39 @@
+{
+  "control": "compute-matched uniform random sampler",
+  "pool_variant": "collective",
+  "pool_kind": "collective",
+  "pool_size": 30,
+  "n_qubits": 14,
+  "lam": 1.5,
+  "seq_len": 12,
+  "draw": 1,
+  "rng_seed": 7994788563727399946,
+  "paired_gqe_run": "data/runs/pool-accuracy-l12-s123-2026-07-25/collective_n_qubits14_lam1.5_s1",
+  "paired_gqe_seed": 1,
+  "ground_energy": -7.474652015747616,
+  "scoring_evaluator": "dicke",
+  "paired_run_evaluator": "dicke",
+  "legacy_config_migration": null,
+  "scoring_cross_check": {
+    "performed": false,
+    "reason": "scoring evaluator matches paired run"
+  },
+  "refine_device": "lightning.qubit",
+  "primary": {
+    "n_samples": 7010,
+    "raw_energy": -7.233827719578805,
+    "raw_rel_error": 0.03221879703047606,
+    "refined_energy": -7.47464173633679,
+    "refined_rel_error": 1.3752360383981341e-06,
+    "refine_evaluations": 3978,
+    "refine_seconds": 0.23722378816455603,
+    "scoring_seconds": 0.5683029508218169
+  },
+  "extended": null,
+  "canonical_reference": {
+    "gqe_refined_rel_error": 1.2235290720988804e-05,
+    "gqe_raw_rel_error": 0.03390579078103491,
+    "gqe_run": "collective_n_qubits14_lam1.5_s1",
+    "gqe_source_sweep": "pool-accuracy-l12-s123-2026-07-25"
+  }
+}

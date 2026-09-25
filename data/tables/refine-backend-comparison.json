@@ -1,0 +1,311 @@
+{
+  "worst_relative_spread": 9.689219124003103e-16,
+  "results": [
+    {
+      "n_qubits": 16,
+      "lam": 2.0,
+      "sequence": 0,
+      "tokens": [
+        0,
+        6131,
+        1519,
+        5422,
+        5502,
+        3732,
+        1066,
+        446,
+        2901,
+        2386,
+        2944,
+        909,
+        4659
+      ],
+      "energy_spread": 5.329070518200751e-15,
+      "relative_spread": 6.661338147751458e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -7.999999999999377,
+          "seconds": 0.6134530769923003,
+          "n_evaluations": 11
+        },
+        "lightning.gpu": {
+          "energy": -7.999999999999383,
+          "seconds": 2.3017152760003228,
+          "n_evaluations": 11
+        }
+      }
+    },
+    {
+      "n_qubits": 16,
+      "lam": 2.0,
+      "sequence": 1,
+      "tokens": [
+        0,
+        4431,
+        738,
+        2459,
+        5881,
+        3404,
+        502,
+        2963,
+        2162,
+        1427,
+        570,
+        5169,
+        1471
+      ],
+      "energy_spread": 0.0,
+      "relative_spread": 0.0,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -8.003902442733652,
+          "seconds": 1.5916092060069786,
+          "n_evaluations": 29
+        },
+        "lightning.gpu": {
+          "energy": -8.003902442733652,
+          "seconds": 1.038670452995575,
+          "n_evaluations": 29
+        }
+      }
+    },
+    {
+      "n_qubits": 16,
+      "lam": 2.0,
+      "sequence": 2,
+      "tokens": [
+        0,
+        4541,
+        604,
+        5959,
+        3126,
+        1782,
+        2506,
+        3294,
+        4063,
+        3977,
+        4428,
+        296,
+        3267
+      ],
+      "energy_spread": 7.105427357601002e-15,
+      "relative_spread": 8.877468364987145e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -8.003889245750402,
+          "seconds": 1.3205559400084894,
+          "n_evaluations": 26
+        },
+        "lightning.gpu": {
+          "energy": -8.00388924575041,
+          "seconds": 0.8989937839942286,
+          "n_evaluations": 26
+        }
+      }
+    },
+    {
+      "n_qubits": 20,
+      "lam": 2.0,
+      "sequence": 0,
+      "tokens": [
+        0,
+        9330,
+        3607,
+        1934,
+        5385,
+        8125,
+        3131,
+        1046,
+        6707,
+        8743,
+        9231,
+        724,
+        8897
+      ],
+      "energy_spread": 1.7763568394002505e-15,
+      "relative_spread": 1.775691370797013e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -10.003747659160718,
+          "seconds": 22.532227368006716,
+          "n_evaluations": 30
+        },
+        "lightning.gpu": {
+          "energy": -10.00374765916072,
+          "seconds": 1.8746990420040675,
+          "n_evaluations": 30
+        }
+      }
+    },
+    {
+      "n_qubits": 20,
+      "lam": 2.0,
+      "sequence": 1,
+      "tokens": [
+        0,
+        5174,
+        585,
+        7085,
+        5887,
+        8435,
+        4044,
+        6169,
+        6337,
+        1655,
+        541,
+        9094,
+        2697
+      ],
+      "energy_spread": 3.552713678800501e-15,
+      "relative_spread": 3.550894331529117e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -10.005123631123658,
+          "seconds": 18.652411704999395,
+          "n_evaluations": 24
+        },
+        "lightning.gpu": {
+          "energy": -10.005123631123661,
+          "seconds": 1.5176063319959212,
+          "n_evaluations": 24
+        }
+      }
+    },
+    {
+      "n_qubits": 20,
+      "lam": 2.0,
+      "sequence": 2,
+      "tokens": [
+        0,
+        555,
+        5894,
+        1508,
+        2831,
+        5852,
+        8346,
+        2263,
+        6080,
+        7365,
+        1964,
+        4459,
+        875
+      ],
+      "energy_spread": 0.0,
+      "relative_spread": 0.0,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -10.005129059289214,
+          "seconds": 18.565750837005908,
+          "n_evaluations": 24
+        },
+        "lightning.gpu": {
+          "energy": -10.005129059289214,
+          "seconds": 1.4910392340098042,
+          "n_evaluations": 24
+        }
+      }
+    },
+    {
+      "n_qubits": 22,
+      "lam": 2.0,
+      "sequence": 0,
+      "tokens": [
+        0,
+        6191,
+        6738,
+        8284,
+        3717,
+        4121,
+        10169,
+        5481,
+        4259,
+        5263,
+        10993,
+        2143,
+        6784
+      ],
+      "energy_spread": 1.0658141036401503e-14,
+      "relative_spread": 9.689219124003103e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -10.999999999998028,
+          "seconds": 38.112189328996465,
+          "n_evaluations": 11
+        },
+        "lightning.gpu": {
+          "energy": -10.999999999998039,
+          "seconds": 1.9329652590095066,
+          "n_evaluations": 11
+        }
+      }
+    },
+    {
+      "n_qubits": 22,
+      "lam": 2.0,
+      "sequence": 1,
+      "tokens": [
+        0,
+        11421,
+        1253,
+        1644,
+        62,
+        9887,
+        11533,
+        8816,
+        9902,
+        1574,
+        8792,
+        2249,
+        72
+      ],
+      "energy_spread": 1.7763568394002505e-15,
+      "relative_spread": 1.6148698540019773e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -10.999999999988084,
+          "seconds": 38.911618957994506,
+          "n_evaluations": 11
+        },
+        "lightning.gpu": {
+          "energy": -10.999999999988082,
+          "seconds": 1.8183689330035122,
+          "n_evaluations": 11
+        }
+      }
+    },
+    {
+      "n_qubits": 22,
+      "lam": 2.0,
+      "sequence": 2,
+      "tokens": [
+        0,
+        6562,
+        10091,
+        11311,
+        1567,
+        11655,
+        10697,
+        5895,
+        7477,
+        3096,
+        7628,
+        1800,
+        5302
+      ],
+      "energy_spread": 1.7763568394002505e-15,
+      "relative_spread": 1.61441578310061e-16,
+      "per_device": {
+        "lightning.qubit": {
+          "energy": -11.003093862156254,
+          "seconds": 91.16856415099755,
+          "n_evaluations": 27
+        },
+        "lightning.gpu": {
+          "energy": -11.003093862156256,
+          "seconds": 4.255853114009369,
+          "n_evaluations": 27
+        }
+      }
+    }
+  ]
+}

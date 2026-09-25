@@ -1,0 +1,64 @@
+{
+  "n_qubits": 16,
+  "h": 1.0,
+  "lam": 2.0,
+  "eps": 1e-06,
+  "tol": 1e-10,
+  "rows": [
+    {
+      "reference": "zero",
+      "e_ref": -8.0,
+      "n_generators": 376,
+      "max_abs_grad": 0.0,
+      "best_generator": "ZZ(0,1,+0.0000)",
+      "best_grad": 0.0,
+      "n_nonzero_grad": 0,
+      "config": "std-pairwise-zero",
+      "label": "std. pairwise, zero"
+    },
+    {
+      "reference": "mean_field",
+      "e_ref": -9.624999999999998,
+      "n_generators": 376,
+      "max_abs_grad": 0.0,
+      "best_generator": "ZZ(0,1,+0.0000)",
+      "best_grad": 0.0,
+      "n_nonzero_grad": 0,
+      "config": "std-pairwise-mf",
+      "label": "std. pairwise, mean field"
+    },
+    {
+      "reference": "zero",
+      "e_ref": -8.0,
+      "n_generators": 616,
+      "max_abs_grad": 0.06249999939811346,
+      "best_generator": "XY(0,1,+0.0000)",
+      "best_grad": -0.06249999939811346,
+      "n_nonzero_grad": 120,
+      "config": "ext-pairwise-zero",
+      "label": "ext. pairwise, zero"
+    },
+    {
+      "reference": "mean_field",
+      "e_ref": -9.624999999999998,
+      "n_generators": 616,
+      "max_abs_grad": 0.027062909246922118,
+      "best_generator": "YZ(5,6,+0.0000)",
+      "best_grad": 0.027062909246922118,
+      "n_nonzero_grad": 240,
+      "config": "ext-pairwise-mf",
+      "label": "ext. pairwise, mean field"
+    },
+    {
+      "reference": "zero",
+      "e_ref": -8.0,
+      "n_generators": 3,
+      "max_abs_grad": 0.0,
+      "best_generator": "exp(-i+0.0000*Jz)",
+      "best_grad": 0.0,
+      "n_nonzero_grad": 0,
+      "config": "collective-zero",
+      "label": "collective, zero"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "run_name": "pool-accuracy-collective-main",
+  "hamiltonian": {
+    "kind": "lmg",
+    "n_qubits": 14,
+    "h": 1,
+    "lam": 1.0,
+    "gamma": 0,
+    "j1": 10.0,
+    "j2": 10.0
+  },
+  "pool": {
+    "kind": "collective",
+    "connectivity": "all",
+    "paulis": [
+      "ZZ",
+      "XX",
+      "YY"
+    ],
+    "include_single_z": true,
+    "angles": [
+      1.5707963267948966,
+      0.7853981633974483,
+      0.39269908169872414,
+      0.19634954084936207,
+      0.09817477042468103,
+      -1.5707963267948966,
+      -0.7853981633974483,
+      -0.39269908169872414,
+      -0.19634954084936207,
+      -0.09817477042468103
+    ],
+    "generators": [
+      "Jz",
+      "Jx2",
+      "Jy2"
+    ],
+    "angle_scale": 0.0
+  },
+  "model": {
+    "kind": "gpt",
+    "order": 1,
+    "n_layer": 12,
+    "n_head": 8,
+    "n_embd": 512,
+    "dropout": 0.2,
+    "bias": false
+  },
+  "train": {
+    "epochs": 700,
+    "seq_gen": 10,
+    "seq_len": 12,
+    "n_batches": 10,
+    "temperature": 0.5,
+    "beta": 0.3,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.95,
+    "eval_iter": 50,
+    "eval_sequences": 100,
+    "seed": 1,
+    "device": "auto",
+    "n_jobs": 16,
+    "checkpoint_every": 50,
+    "energy_norm": "shift_scale",
+    "refine": true,
+    "init_state": "zero",
+    "evaluator": "dicke",
+    "pennylane": {
+      "device": "lightning.qubit",
+      "shots": 0,
+      "refine_shots": 0,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    },
+    "save_final_checkpoint": false
+  },
+  "vocab_size": 31,
+  "pool_size": 30
+}

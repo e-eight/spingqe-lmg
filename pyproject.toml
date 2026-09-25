@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spingqe-lmg"
+version = "0.1.0"
+description = "SpinGQE extended to the Lipkin-Meshkov-Glick model with individual spin encoding"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Soham Pal", email = "soham@illinois.edu" }]
+dependencies = [
+    "pennylane>=0.39",
+    "torch>=2.0",
+    "numpy",
+    "scipy",
+    "pandas",
+    "joblib",
+    "matplotlib",
+]
+
+[project.urls]
+Repository = "https://github.com/e-eight/SpinGQE-LMG"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "ruff"]
+cudaq = ["cudaq>=0.9"]
+
+[project.scripts]
+spingqe-train = "spingqe_lmg.cli.train:train_main"
+spingqe-refine = "spingqe_lmg.cli.train:refine_main"
+spingqe-exact = "spingqe_lmg.cli.analysis:exact_main"
+spingqe-sweep-plan = "spingqe_lmg.cli.analysis:sweep_plan_main"
+spingqe-aggregate = "spingqe_lmg.cli.analysis:aggregate_main"
+spingqe-state-quality = "spingqe_lmg.cli.analysis:state_quality_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/conftest.py" = ["E402"]  # _gpu_present() must run before import torch
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "slow: long-running training tests (deselected by default; run with -m slow on a GPU node)",
+    "gpu: requires a CUDA GPU (excluded from default run; run with -m gpu on a GPU node)",
+    "script: tests a standalone script or plotting utility (excluded from default run)",
+    "hardware: requires CUDA-Q or specialised GPU hardware (excluded from default run)",
+]
+addopts = "-m 'not slow and not script and not hardware and not gpu'"

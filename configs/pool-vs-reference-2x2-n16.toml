@@ -1,0 +1,47 @@
+# tab:2x2 missing cells: standard pairwise pool from the mean-field reference
+# and extended pairwise pool from the zero reference, N=16, lambda in {1.5, 2.0},
+# L=12, incremental evaluator. Seeds 1-3 here; seeds 4-10 in
+# pool-vs-reference-2x2-n16-seeds4-10.toml.
+#
+#   spingqe-sweep-plan --config configs/pool-vs-reference-2x2-n16.toml \
+#       --runs-root data/runs/pool-vs-reference-2026-07-26
+
+run_name = "pool-vs-reference-2x2-n16"
+
+[hamiltonian]
+kind = "lmg"
+h = 1
+gamma = 0
+n_qubits = 16
+
+[train]
+epochs = 700
+seq_len = 12
+n_jobs = 16
+energy_norm = "shift_scale"
+evaluator = "incremental"
+save_final_checkpoint = false
+
+[train.pennylane]
+device = "lightning.qubit"
+
+[sweep]
+seeds = [1, 2, 3]
+
+[sweep.grid]
+"hamiltonian.lam" = [1.5, 2.0]
+
+# Missing cell 1: standard pool words, broken-symmetry reference.
+[[sweep.variants]]
+name = "pairwise-all-mf"
+"pool.kind" = "pauli_pair"
+"pool.connectivity" = "all"
+"train.init_state" = "mean_field"
+
+# Missing cell 2: extended pool words, even reference.
+[[sweep.variants]]
+name = "pairwise-ext-zero"
+"pool.kind" = "pauli_pair"
+"pool.connectivity" = "all"
+"pool.paulis" = ["ZZ", "XX", "YY", "YZ", "XY"]
+"train.init_state" = "zero"

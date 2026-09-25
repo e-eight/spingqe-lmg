@@ -1,0 +1,50 @@
+{
+  "control": "compute-matched uniform random sampler",
+  "pool_variant": "pairwise-ext-mf",
+  "pool_kind": "pauli_pair",
+  "pool_size": 1480,
+  "n_qubits": 8,
+  "lam": 2.0,
+  "seq_len": 12,
+  "draw": 3,
+  "rng_seed": 1753138483529525386,
+  "paired_gqe_run": "data/runs/lmg-qpt-sweep-n10-16/pairwise-ext-mf_n_qubits8_lam2.0_s3",
+  "paired_gqe_seed": 3,
+  "ground_energy": -4.702071737777979,
+  "scoring_evaluator": "incremental",
+  "paired_run_evaluator": "pennylane",
+  "legacy_config_migration": {
+    "legacy_keys": {
+      "qml_device": "default.qubit"
+    },
+    "migrated_to_pennylane": {
+      "device": "default.qubit"
+    }
+  },
+  "scoring_cross_check": {
+    "performed": true,
+    "n_sequences": 64,
+    "mirrored_evaluator": "pennylane",
+    "substituted_evaluator": "incremental",
+    "max_abs_diff": 2.042810365310288e-14,
+    "max_rel_diff": 5.335246617393014e-15
+  },
+  "refine_device": "lightning.qubit",
+  "primary": {
+    "n_samples": 7010,
+    "raw_energy": -4.42089728455896,
+    "raw_rel_error": 0.059797993076109904,
+    "refined_energy": -4.625938377685325,
+    "refined_rel_error": 0.01619145013908947,
+    "refine_evaluations": 33,
+    "refine_seconds": 0.42591468431055546,
+    "scoring_seconds": 4.81894997227937
+  },
+  "extended": null,
+  "canonical_reference": {
+    "gqe_refined_rel_error": 0.01596354107024465,
+    "gqe_raw_rel_error": 0.06125694313950964,
+    "gqe_run": "pairwise-ext-mf_n_qubits8_lam2.0_s3",
+    "gqe_source_sweep": "lmg-qpt-sweep-n10-16"
+  }
+}

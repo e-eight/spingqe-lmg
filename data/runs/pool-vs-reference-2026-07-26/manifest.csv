@@ -1,0 +1,13 @@
+row,run_id,config,out_dir,hamiltonian.lam,pool.connectivity,pool.kind,pool.paulis,train.init_state,train.seed
+0,pairwise-all-mf_lam1.5_s1,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-all-mf_lam1.5_s1,1.5,"""all""","""pauli_pair""",,"""mean_field""",1
+1,pairwise-all-mf_lam1.5_s2,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-all-mf_lam1.5_s2,1.5,"""all""","""pauli_pair""",,"""mean_field""",2
+2,pairwise-all-mf_lam1.5_s3,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-all-mf_lam1.5_s3,1.5,"""all""","""pauli_pair""",,"""mean_field""",3
+3,pairwise-all-mf_lam2.0_s1,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-all-mf_lam2.0_s1,2.0,"""all""","""pauli_pair""",,"""mean_field""",1
+4,pairwise-all-mf_lam2.0_s2,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-all-mf_lam2.0_s2,2.0,"""all""","""pauli_pair""",,"""mean_field""",2
+5,pairwise-all-mf_lam2.0_s3,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-all-mf_lam2.0_s3,2.0,"""all""","""pauli_pair""",,"""mean_field""",3
+6,pairwise-ext-zero_lam1.5_s1,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-ext-zero_lam1.5_s1,1.5,"""all""","""pauli_pair""","[""ZZ"", ""XX"", ""YY"", ""YZ"", ""XY""]","""zero""",1
+7,pairwise-ext-zero_lam1.5_s2,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-ext-zero_lam1.5_s2,1.5,"""all""","""pauli_pair""","[""ZZ"", ""XX"", ""YY"", ""YZ"", ""XY""]","""zero""",2
+8,pairwise-ext-zero_lam1.5_s3,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-ext-zero_lam1.5_s3,1.5,"""all""","""pauli_pair""","[""ZZ"", ""XX"", ""YY"", ""YZ"", ""XY""]","""zero""",3
+9,pairwise-ext-zero_lam2.0_s1,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-ext-zero_lam2.0_s1,2.0,"""all""","""pauli_pair""","[""ZZ"", ""XX"", ""YY"", ""YZ"", ""XY""]","""zero""",1
+10,pairwise-ext-zero_lam2.0_s2,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-ext-zero_lam2.0_s2,2.0,"""all""","""pauli_pair""","[""ZZ"", ""XX"", ""YY"", ""YZ"", ""XY""]","""zero""",2
+11,pairwise-ext-zero_lam2.0_s3,configs/pool-vs-reference-2x2-n16.toml,data/runs/pool-vs-reference-2026-07-26/pairwise-ext-zero_lam2.0_s3,2.0,"""all""","""pauli_pair""","[""ZZ"", ""XX"", ""YY"", ""YZ"", ""XY""]","""zero""",3

@@ -1,0 +1,35 @@
+# Pre-registered N=28 depth test, training stage: lambda=2.0, collective pool,
+# zero reference, Dicke evaluator, 8/N-rescaled vocabulary.
+# 2 seq_len arms (68, 72) x 6 seeds = 12 runs; refined afterwards with
+# `spingqe-refine --generate 50 --top 50`.
+# Runs: data/runs/prospective-depth-n28-2026-07-28/train
+
+run_name = "prospective-depth-n28"
+
+[hamiltonian]
+kind = "lmg"
+n_qubits = 28
+h = 1.0
+lam = 2.0
+gamma = 0.0
+
+[train]
+epochs = 700
+n_jobs = 16
+energy_norm = "shift_scale"
+evaluator = "dicke"
+init_state = "zero"
+
+[train.pennylane]
+device = "lightning.qubit"
+
+[sweep]
+seeds = [1, 2, 3, 4, 5, 6]
+
+[sweep.grid]
+"train.seq_len" = [68, 72]
+
+[[sweep.variants]]
+name = "collective-scaled"
+"pool.kind" = "collective"
+"pool.angle_scale" = 8

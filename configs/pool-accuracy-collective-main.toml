@@ -1,0 +1,33 @@
+# L=12 pool-accuracy grid, collective pool from the zero reference:
+# N in {8,10,12,14,16} x lambda in {1.0,1.5,2.0}, seeds 1-10.
+#
+#   spingqe-sweep-plan --config configs/pool-accuracy-collective-main.toml \
+#       --runs-root data/runs/pool-accuracy-l12-s1-10-2026-07-28
+
+run_name = "pool-accuracy-collective-main"
+
+[hamiltonian]
+kind = "lmg"
+h = 1
+gamma = 0
+
+[train]
+epochs = 700
+n_jobs = 16
+energy_norm = "shift_scale"
+evaluator = "dicke"
+save_final_checkpoint = false
+
+[train.pennylane]
+device = "lightning.qubit"
+
+[sweep]
+seeds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+[sweep.grid]
+"hamiltonian.n_qubits" = [8, 10, 12, 14, 16]
+"hamiltonian.lam" = [1.0, 1.5, 2.0]
+
+[[sweep.variants]]
+name = "collective"
+"pool.kind" = "collective"

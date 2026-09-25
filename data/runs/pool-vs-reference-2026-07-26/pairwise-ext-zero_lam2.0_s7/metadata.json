@@ -1,0 +1,17 @@
+{
+  "run_name": "pool-vs-reference-2x2-n16-seeds4-10",
+  "ground_energy": -9.648632144195293,
+  "initial_energy": -8.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -7.974308554725235,
+  "best_epoch": 162,
+  "abs_error": 1.6743235894700579,
+  "refined_energy": -8.005838610642092,
+  "refined_abs_error": 1.642793533553201,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

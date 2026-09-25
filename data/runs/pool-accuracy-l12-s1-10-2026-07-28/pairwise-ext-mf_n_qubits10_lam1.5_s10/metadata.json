@@ -1,0 +1,17 @@
+{
+  "run_name": "pool-accuracy-pairwise-n10-lam15-gapfill",
+  "ground_energy": -5.34716813572307,
+  "initial_energy": -5.208333333333332,
+  "init_state": "mean_field",
+  "init_angle": 0.8410686705679303,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -5.080728750681888,
+  "best_epoch": 403,
+  "abs_error": 0.26643938504118214,
+  "refined_energy": -5.2155914815032105,
+  "refined_abs_error": 0.13157665421985953,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

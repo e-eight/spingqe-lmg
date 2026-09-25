@@ -1,0 +1,21 @@
+{
+  "run_name": "collective-dicke-l26-smalln",
+  "ground_energy": -4.7020717377779775,
+  "initial_energy": -4.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": false,
+  "best_energy": -4.351375371926769,
+  "best_epoch": 113,
+  "abs_error": 0.3506963658512081,
+  "refined_energy": -4.702071737777771,
+  "refined_abs_error": 2.0605739337042905e-13,
+  "git_sha": "b310d677f60317033b62a403451365cf4bb367de",
+  "hostname": "gh048.hsn.cm.delta.internal.ncsa.edu",
+  "slurm_job_id": "2510829",
+  "slurm_array_task_id": "10",
+  "package_version": "0.1.0",
+  "torch_version": "2.10.0+cu129",
+  "device": "cuda"
+}

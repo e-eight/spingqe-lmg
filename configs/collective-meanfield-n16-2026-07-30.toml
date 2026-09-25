@@ -1,0 +1,35 @@
+# Collective pool from the mean-field reference: N=16, lambda in {1.5, 2.0},
+# seeds 1-10, Dicke (permutation-symmetric) evaluator, L=12 (default).
+# Supplies the collective + mean-field numbers quoted with tab:2x2.
+#
+#   spingqe-sweep-plan --config configs/collective-meanfield-n16-2026-07-30.toml \
+#       --runs-root data/runs/collective-mf-n16-2026-07-30
+
+run_name = "collective-meanfield-n16"
+
+[hamiltonian]
+kind = "lmg"
+h = 1
+gamma = 0
+
+[train]
+epochs = 700
+n_jobs = 16
+energy_norm = "shift_scale"
+evaluator = "dicke"
+init_state = "mean_field"
+save_final_checkpoint = false
+
+[train.pennylane]
+device = "lightning.qubit"
+
+[sweep]
+seeds = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+[sweep.grid]
+"hamiltonian.n_qubits" = [16]
+"hamiltonian.lam" = [1.5, 2.0]
+
+[[sweep.variants]]
+name = "collective-mf"
+"pool.kind" = "collective"

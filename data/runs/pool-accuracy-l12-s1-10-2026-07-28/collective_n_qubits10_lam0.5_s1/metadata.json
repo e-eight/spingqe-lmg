@@ -1,0 +1,17 @@
+{
+  "run_name": "pool-accuracy-collective-smalln-lam05",
+  "ground_energy": -5.017724721593217,
+  "initial_energy": -5.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -5.005911679597285,
+  "best_epoch": 216,
+  "abs_error": 0.01181304199593125,
+  "refined_energy": -5.017724501465345,
+  "refined_abs_error": 2.2012787148639745e-07,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

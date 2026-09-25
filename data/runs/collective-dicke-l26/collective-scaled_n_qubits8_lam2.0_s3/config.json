@@ -1,0 +1,76 @@
+{
+  "run_name": "collective-dicke-l26-smalln",
+  "hamiltonian": {
+    "kind": "lmg",
+    "n_qubits": 8,
+    "h": 1.0,
+    "lam": 2.0,
+    "gamma": 0.0,
+    "j1": 10.0,
+    "j2": 10.0
+  },
+  "pool": {
+    "kind": "collective",
+    "connectivity": "all",
+    "paulis": [
+      "ZZ",
+      "XX",
+      "YY"
+    ],
+    "include_single_z": true,
+    "angles": [
+      1.5707963267948966,
+      0.7853981633974483,
+      0.39269908169872414,
+      0.19634954084936207,
+      0.09817477042468103,
+      -1.5707963267948966,
+      -0.7853981633974483,
+      -0.39269908169872414,
+      -0.19634954084936207,
+      -0.09817477042468103
+    ],
+    "generators": [
+      "Jz",
+      "Jx2",
+      "Jy2"
+    ],
+    "angle_scale": 8
+  },
+  "model": {
+    "n_layer": 12,
+    "n_head": 8,
+    "n_embd": 512,
+    "dropout": 0.2,
+    "bias": false
+  },
+  "train": {
+    "epochs": 700,
+    "seq_gen": 10,
+    "seq_len": 26,
+    "n_batches": 10,
+    "temperature": 0.5,
+    "beta": 0.3,
+    "learning_rate": 5e-05,
+    "weight_decay": 0.01,
+    "adam_beta1": 0.9,
+    "adam_beta2": 0.95,
+    "eval_iter": 50,
+    "eval_sequences": 100,
+    "seed": 3,
+    "device": "auto",
+    "qml_device": "default.qubit",
+    "n_jobs": 16,
+    "checkpoint_every": 50,
+    "energy_norm": "shift_scale",
+    "refine": true,
+    "init_state": "zero",
+    "evaluator": "dicke",
+    "shots": 0,
+    "refine_shots": false,
+    "refine_optimizer": "spsa",
+    "refine_gradient": "adjoint"
+  },
+  "vocab_size": 31,
+  "pool_size": 30
+}

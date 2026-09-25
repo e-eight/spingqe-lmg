@@ -1,0 +1,17 @@
+{
+  "run_name": "dicke-showcase-zero-seeds",
+  "ground_energy": -53.98622751937199,
+  "initial_energy": -50.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -52.17164082560168,
+  "best_epoch": 240,
+  "abs_error": 1.814586693770309,
+  "refined_energy": -53.73860837272713,
+  "refined_abs_error": 0.2476191466448583,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

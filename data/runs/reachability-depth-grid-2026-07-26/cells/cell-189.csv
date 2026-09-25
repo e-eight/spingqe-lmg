@@ -1,0 +1,13 @@
+pool,n_qubits,lam,seq_len,restart,rel_error,n_evaluations,seconds,init_angles,device,reached
+pairwise-ext-mf,12,2.0,20,0,0.15856295876041415,63,1.4801086299994495,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,1,0.1601476601506895,53,1.3443644020007923,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,2,0.15849106939767169,56,1.1472444410028402,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,3,0.16057551168629813,61,1.146290836011758,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,4,0.28335641258156474,57,1.1375079040008131,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,5,0.15845839228425862,68,1.6542797870060895,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,6,0.1594316979638757,103,2.026952048006933,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,7,0.2885923954074505,70,1.3684250480000628,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,8,0.15599213869337974,46,1.0646674919989891,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,9,0.28867994109609507,63,1.4193630519876024,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,10,0.28210390707432026,61,1.231805325995083,random,lightning.qubit,False
+pairwise-ext-mf,12,2.0,20,11,0.2966632256313481,62,1.2608559000073,random,lightning.qubit,False

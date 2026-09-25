@@ -1,0 +1,80 @@
+{
+  "control": "compute-matched uniform random sampler",
+  "pool_variant": "pairwise-ext-mf",
+  "pool_kind": "pauli_pair",
+  "pool_size": 3420,
+  "n_qubits": 12,
+  "lam": 2.0,
+  "seq_len": 12,
+  "draw": 2,
+  "rng_seed": 5485514878813306790,
+  "paired_gqe_run": "data/runs/lmg-extmf-gap-n12-16/pairwise-ext-mf_n_qubits12_lam2.0_s2",
+  "paired_gqe_seed": 2,
+  "ground_energy": -7.160898355631997,
+  "scoring_evaluator": "incremental",
+  "paired_run_evaluator": "pennylane",
+  "legacy_config_migration": {
+    "legacy_keys": {
+      "qml_device": "lightning.qubit",
+      "shots": 0,
+      "refine_shots": false,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    },
+    "migrated_to_pennylane": {
+      "device": "lightning.qubit",
+      "shots": 0,
+      "refine_shots": 0,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    }
+  },
+  "scoring_cross_check": {
+    "performed": true,
+    "n_sequences": 64,
+    "mirrored_evaluator": "pennylane",
+    "substituted_evaluator": "incremental",
+    "max_abs_diff": 3.108624468950438e-14,
+    "max_rel_diff": 5.845749998592814e-15
+  },
+  "refine_device": "lightning.qubit",
+  "primary": {
+    "n_samples": 7010,
+    "raw_energy": -6.867144855914189,
+    "raw_rel_error": 0.04102187814002039,
+    "refined_energy": -7.1261513088562864,
+    "refined_rel_error": 0.004852330678368365,
+    "refine_evaluations": 16,
+    "refine_seconds": 0.3080742070451379,
+    "scoring_seconds": 10.697126136627048
+  },
+  "extended": {
+    "n_samples": 8410,
+    "raw_energy": -6.876523112387079,
+    "raw_rel_error": 0.03971223010326059,
+    "refined_energy": -7.126301519064843,
+    "refined_rel_error": 0.0048313542308478195,
+    "tokens": [
+      0,
+      325,
+      18,
+      44,
+      617,
+      3394,
+      1718,
+      1725,
+      2517,
+      2971,
+      2211,
+      2974,
+      2875
+    ],
+    "refine_seconds": 0.20601040171459317
+  },
+  "canonical_reference": {
+    "gqe_refined_rel_error": 0.0048112048958088224,
+    "gqe_raw_rel_error": 0.04346767204019978,
+    "gqe_run": "pairwise-ext-mf_n_qubits12_lam2.0_s2",
+    "gqe_source_sweep": "lmg-extmf-gap-n12-16"
+  }
+}

@@ -1,0 +1,13 @@
+pool,n_qubits,lam,seq_len,restart,rel_error,n_evaluations,seconds,init_angles,device,reached
+pairwise-all,14,1.5,32,0,0.06048209786346641,315,11.491357577964664,random,lightning.qubit,False
+pairwise-all,14,1.5,32,1,0.060536553236070004,283,11.055643609259278,random,lightning.qubit,False
+pairwise-all,14,1.5,32,2,0.06115195219976229,566,20.054355883039534,random,lightning.qubit,False
+pairwise-all,14,1.5,32,3,0.2963729979682163,172,6.399516344070435,random,lightning.qubit,False
+pairwise-all,14,1.5,32,4,0.061011532332343736,165,5.680515279993415,random,lightning.qubit,False
+pairwise-all,14,1.5,32,5,0.06015062165513625,181,6.641249299049377,random,lightning.qubit,False
+pairwise-all,14,1.5,32,6,0.06005416204320037,143,5.540068648289889,random,lightning.qubit,False
+pairwise-all,14,1.5,32,7,0.06163413059709011,137,5.2083088690415025,random,lightning.qubit,False
+pairwise-all,14,1.5,32,8,0.307808567156713,279,10.858152258675545,random,lightning.qubit,False
+pairwise-all,14,1.5,32,9,0.06047643120728761,276,10.32192567922175,random,lightning.qubit,False
+pairwise-all,14,1.5,32,10,0.06006007436294635,317,11.954961649142206,random,lightning.qubit,False
+pairwise-all,14,1.5,32,11,0.06136234512089116,149,5.528428121935576,random,lightning.qubit,False

@@ -1,0 +1,17 @@
+{
+  "run_name": "collective-meanfield-n16",
+  "ground_energy": -9.648632144195293,
+  "initial_energy": -9.625000000000007,
+  "init_state": "mean_field",
+  "init_angle": 1.0471975511965979,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -9.084082452438409,
+  "best_epoch": 160,
+  "abs_error": 0.5645496917568842,
+  "refined_energy": -9.642053888613802,
+  "refined_abs_error": 0.006578255581491277,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

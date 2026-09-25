@@ -1,0 +1,58 @@
+{
+  "control": "compute-matched uniform random sampler",
+  "pool_variant": "pairwise-ext-mf",
+  "pool_kind": "pauli_pair",
+  "pool_size": 3420,
+  "n_qubits": 12,
+  "lam": 2.0,
+  "seq_len": 12,
+  "draw": 3,
+  "rng_seed": 3543364216574670426,
+  "paired_gqe_run": "data/runs/lmg-extmf-gap-n12-16/pairwise-ext-mf_n_qubits12_lam2.0_s3",
+  "paired_gqe_seed": 3,
+  "ground_energy": -7.160898355631997,
+  "scoring_evaluator": "incremental",
+  "paired_run_evaluator": "pennylane",
+  "legacy_config_migration": {
+    "legacy_keys": {
+      "qml_device": "lightning.qubit",
+      "shots": 0,
+      "refine_shots": false,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    },
+    "migrated_to_pennylane": {
+      "device": "lightning.qubit",
+      "shots": 0,
+      "refine_shots": 0,
+      "refine_optimizer": "spsa",
+      "refine_gradient": "adjoint"
+    }
+  },
+  "scoring_cross_check": {
+    "performed": true,
+    "n_sequences": 64,
+    "mirrored_evaluator": "pennylane",
+    "substituted_evaluator": "incremental",
+    "max_abs_diff": 2.4868995751603507e-14,
+    "max_rel_diff": 6.0558510660572375e-15
+  },
+  "refine_device": "lightning.qubit",
+  "primary": {
+    "n_samples": 7010,
+    "raw_energy": -6.914000379202373,
+    "raw_rel_error": 0.034478631614068424,
+    "refined_energy": -7.125830768107592,
+    "refined_rel_error": 0.0048970933230499565,
+    "refine_evaluations": 15,
+    "refine_seconds": 0.29137803288176656,
+    "scoring_seconds": 10.730068106204271
+  },
+  "extended": null,
+  "canonical_reference": {
+    "gqe_refined_rel_error": 0.004839884538936785,
+    "gqe_raw_rel_error": 0.03861199497685368,
+    "gqe_run": "pairwise-ext-mf_n_qubits12_lam2.0_s3",
+    "gqe_source_sweep": "lmg-extmf-gap-n12-16"
+  }
+}

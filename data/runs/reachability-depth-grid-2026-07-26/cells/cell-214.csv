@@ -1,0 +1,13 @@
+pool,n_qubits,lam,seq_len,restart,rel_error,n_evaluations,seconds,init_angles,device,reached
+pairwise-ext-mf,16,1.5,12,0,0.290764384154226,53,3.467157799008419,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,1,0.17496884028696588,42,1.4765635299991118,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,2,0.18005768802972957,14,0.5175236650102306,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,3,0.06301153197025819,22,0.9003220339945983,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,4,0.06312741117309624,37,1.277933794001001,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,5,0.286669570261812,36,1.2776516899903072,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,6,0.0628702920556319,39,1.3678164909943007,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,7,0.06339664021919286,25,0.9532903929939494,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,8,0.17396210093466513,25,0.8814106530044228,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,9,0.06339664472443934,30,1.0543803950131405,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,10,0.06313957536786875,59,2.1469869010034017,random,lightning.gpu,False
+pairwise-ext-mf,16,1.5,12,11,0.17484079674794423,18,0.6424850080074975,random,lightning.gpu,False

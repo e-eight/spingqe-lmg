@@ -1,0 +1,17 @@
+{
+  "run_name": "prospective-depth-n28",
+  "ground_energy": -17.1408912671902,
+  "initial_energy": -14.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -11.824671429881509,
+  "best_epoch": 444,
+  "abs_error": 5.31621983730869,
+  "refined_energy": -17.140891266514487,
+  "refined_abs_error": 6.757119308531401e-10,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

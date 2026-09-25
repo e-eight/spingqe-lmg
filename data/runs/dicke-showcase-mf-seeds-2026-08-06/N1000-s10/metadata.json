@@ -1,0 +1,17 @@
+{
+  "run_name": "dicke-showcase-mf-seeds",
+  "ground_energy": -541.4829947522156,
+  "initial_energy": -541.4583333333334,
+  "init_state": "mean_field",
+  "init_angle": 0.8410686705679303,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -541.430138145688,
+  "best_epoch": 337,
+  "abs_error": 0.05285660652759816,
+  "refined_energy": -541.4822869791847,
+  "refined_abs_error": 0.0007077730309674735,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

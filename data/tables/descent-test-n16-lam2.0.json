@@ -1,0 +1,68 @@
+{
+  "n_qubits": 16,
+  "h": 1.0,
+  "lam": 2.0,
+  "tol": 1e-10,
+  "rows": [
+    {
+      "reference": "zero",
+      "mean_field_angle": 0.0,
+      "n_tokens": 30,
+      "e_ref": -8.0,
+      "e_best": -8.492183438755765,
+      "best_token": "exp(-i+0.1963*Jy2)",
+      "gain": 0.49218343875576487,
+      "n_improving": 4,
+      "config": "collective-zero",
+      "label": "collective, zero"
+    },
+    {
+      "reference": "mean_field",
+      "mean_field_angle": 1.0471975511965979,
+      "n_tokens": 6160,
+      "e_ref": -9.624999999999998,
+      "e_best": -9.622592363337953,
+      "best_token": "XX(0,3,+0.0982)",
+      "gain": -0.002407636662045576,
+      "n_improving": 0,
+      "config": "ext-pairwise-mf",
+      "label": "ext. pairwise, mean field"
+    },
+    {
+      "reference": "zero",
+      "mean_field_angle": 0.0,
+      "n_tokens": 6160,
+      "e_ref": -8.0,
+      "e_best": -8.001310797942795,
+      "best_token": "XY(0,1,+0.0982)",
+      "gain": 0.0013107979427946503,
+      "n_improving": 120,
+      "config": "ext-pairwise-zero",
+      "label": "ext. pairwise, zero"
+    },
+    {
+      "reference": "mean_field",
+      "mean_field_angle": 1.0471975511965979,
+      "n_tokens": 3760,
+      "e_ref": -9.624999999999998,
+      "e_best": -9.622592363337953,
+      "best_token": "XX(0,3,+0.0982)",
+      "gain": -0.002407636662045576,
+      "n_improving": 0,
+      "config": "std-pairwise-mf",
+      "label": "std. pairwise, mean field"
+    },
+    {
+      "reference": "zero",
+      "mean_field_angle": 0.0,
+      "n_tokens": 3760,
+      "e_ref": -8.0,
+      "e_best": -8.0,
+      "best_token": "ZZ(0,1,+1.5708)",
+      "gain": 0.0,
+      "n_improving": 0,
+      "config": "std-pairwise-zero",
+      "label": "std. pairwise, zero"
+    }
+  ]
+}

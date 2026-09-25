@@ -1,0 +1,17 @@
+{
+  "run_name": "pool-accuracy-pairwise-l12-lam1.0-2.0",
+  "ground_energy": -6.104933312061921,
+  "initial_energy": -6.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -5.995585033330462,
+  "best_epoch": 25,
+  "abs_error": 0.10934827873145903,
+  "refined_energy": -6.000867679117501,
+  "refined_abs_error": 0.10406563294441984,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}

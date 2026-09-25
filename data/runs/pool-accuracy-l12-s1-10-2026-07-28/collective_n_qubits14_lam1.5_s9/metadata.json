@@ -1,0 +1,17 @@
+{
+  "run_name": "pool-accuracy-collective-main",
+  "ground_energy": -7.474652015747616,
+  "initial_energy": -7.0,
+  "init_state": "zero",
+  "init_angle": 0.0,
+  "shots": 0,
+  "refine_shots": 0,
+  "best_energy": -7.292261138375942,
+  "best_epoch": 279,
+  "abs_error": 0.1823908773716747,
+  "refined_energy": -7.473801183621068,
+  "refined_abs_error": 0.000850832126548795,
+  "package_version": "0.1.0",
+  "torch_version": "2.12.1+cu130",
+  "device": "cuda"
+}
